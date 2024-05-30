@@ -6,30 +6,30 @@
     <title>Profile</title>
 
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="img/pulse-logo.png" alt="" />
-        </div>
-        <nav class="menu">
-            <a class="help-link" href="#"> Help </a>
-            <a class="sign-in-link" href="#"> Sign In </a>
-        </nav>
-    </header>
+    @include('templates.header')
 
-    <main>
+    <div class="profile-body">
         @include('templates.navbar')
-        <section id="profile-content">
-            <div class="profile-header">
-                <img src="images/profile.jpg" alt="Profile Picture">
-                <div>
-                    <h1>Nath❤️Mich</h1>
-                    <p>@NathanielMapagmahal25</p>
-                </div>
-        </section>
 
-    </main>
+        <div class="profile-content">
+            <div class="profile-header">
+                <img class="profile-pic" src="img/user-profile-icon.png" alt="Profile Picture">
+                <div class="user-details">
+                    <h1 class="display-name">Nath❤️Mich</h1>
+                    <p class="username">@NathanielMapagmahal25</p>
+                </div>
+                <button class="add-friend-button">Add Friend</button>
+                <p class="bio">love ko si mitch</p>
+            </div>
+            <div class="about-card">
+                About Me
+            </div>
+        </div>
+
+    </div>
 
     @include('templates.footer')
 
