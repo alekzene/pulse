@@ -32,8 +32,8 @@ header .logo img {
 header .search-bar {
     flex-grow: 1;
     position: relative;
-    margin-left: 160px;
-    margin-right: 130px;
+    margin-left: 100px;
+    margin-right: 85px;
     display: flex;
 }
 
