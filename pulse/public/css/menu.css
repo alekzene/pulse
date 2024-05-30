@@ -1,0 +1,44 @@
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 45px;
+    margin-left: 60px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #3e6f58;
+    font-size: 20px;
+    margin: 0 25px;
+}
+
+.sign-in {
+    font-weight: bold;
+}

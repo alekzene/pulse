@@ -4,19 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pulse - Capture Your Thoughts</title>
+
+        @include('templates.font')
         <link rel="stylesheet" href="{{ asset('css/welcome.css')}}">
-        
+        <link rel="stylesheet" href="{{ asset('css/menu.css')}}">
+
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <img src="images/Pulse Logo.png" alt="" />
-            </div>
-            <nav>
-                <a href="#">Help</a>
-                <a href="#">Sign In</a>
-            </nav>
-        </header>
+        @include('templates.menu')
         <main>
             <div class="content">
                 <div class="text">
@@ -32,7 +27,7 @@
                     </div>
                 </div>
                 <div class="image">
-                    <img src="images/Mockup.png" alt="" />
+                    <img src="img/mockup.png" alt="" />
                 </div>
             </div>
         </main>
