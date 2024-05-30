@@ -3,17 +3,21 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('sample');
 });
 
 Route::get('/welcome', function () {
-    return view('pulse_Welcome');
+    return view('welcome');
 });
 
 Route::get('/help', function () {
-    return view('Help');
+    return view('help');
 });
 
-Route::get('/newsfeed', function () {
-    return view('NewsFeed');
+Route::get('/feed', function () {
+    return view('feed');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
 });
