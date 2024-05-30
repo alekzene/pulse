@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulse - Homepage
     </title>
-    <link rel="stylesheet" href="{{ asset('css/newsFeed.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/feed.css')}}">
 </head>
 <body>
     <header>
