@@ -1,4 +1,4 @@
-.sidebar {
+.navbar {
     width: 250px;
     background-color: #fff;
     height: 100vh;
@@ -25,33 +25,6 @@
     transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
 }
 
-.profile-body {
-    display: flex;
-    flex-direction: row;
-    background-color: pink;
-}
-
-.profile-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(200, 213, 185, 1);
-    flex: 2;
-    height: 100vh;
-    justify-content: space-between;
-}
-
-.profile-header {
-    background-color: white;
-    border-radius: 15px;
-    padding: 10px;
-}
-
-.about-card {
-    background-color: white;
-}
-
 .profile p {
     font-size: 20px;
     color: inherit;
@@ -72,17 +45,17 @@
     font-weight: bold; /* Bold the text on hover */
 }
 
-.sidebar ul {
+.navbar ul {
     list-style: none;
     padding: 0;
     justify-content: center;
 }
 
-.sidebar ul li {
+.navbar ul li {
     padding: 20px 20px;
 }
 
-.sidebar ul li a {
+.navbar ul li a {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -104,41 +77,4 @@ ul li a:hover {
     background-color: White; /* Optional: change background color on hover */
     color: #3e6f58; /* Change text color on hover */
     font-weight: bold; /* Bold the text on hover */
-}
-
-.profile-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: rgba(200, 213, 185, 1);
-}
-
-.profile-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-    margin-bottom: 5px;
-}
-
-.user-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.display-name, .username {
-    margin-top: 0px;
-    margin-bottom: 5px;
 }

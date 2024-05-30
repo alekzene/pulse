@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="navbar">
     <a href="#" class="profile-link">
         <div class="profile">
             <img src="img/user-icon.png" alt="">
