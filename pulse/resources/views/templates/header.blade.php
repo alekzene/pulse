@@ -4,12 +4,7 @@
     </div>
 
     <div class="search-bar">
-        <input type="text" placeholder="Search">
         <img src="img/icons/search.png" alt="Search Icon" class="search-icon">
+        <input type="text" placeholder="Search">
     </div>
-
-    <nav class="menu">
-        <a class="help-link" href="#"> Help </a>
-        <a class="sign-in-link" href="#"> Sign In </a>
-    </nav>
 </header>

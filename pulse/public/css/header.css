@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f2f5;
@@ -11,79 +11,55 @@ body {
 header {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 20px 20px; /* Adjusted padding */
+    align-items: center;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 header .logo img {
     height: 45px;
     margin-left: 60px;
+    margin-right: 90px;
 }
 
 header .search-bar {
-    flex: 1;
+    flex-grow: 1;
+    position: relative;
+    margin-left: 150px;
+    margin-right: 150px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 20px;
-    left: 400px;
-    right: 400px;
 }
 
 header .search-bar input {
-    height: 50px;
-    width: 900px;
-    border-radius: 20px;
+    flex-grow: 1;
+    border-radius: 10px;
     border: 2px solid #3e6f58;
-    padding-left: 45px; 
+    padding-left: 40px; 
     padding-right: 10px;
     box-sizing: border-box;
 }
 
 header .search-bar input::placeholder {
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 15px;
+    color: #3e6f58;
 }
 
-header .search-icon {
+header .search-bar img {
     position: absolute;
-    left: 15px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
 }
-header .search-bar Input:focus {
+
+header .search-bar input:active, header .search-bar input:focus{
     border-color: solid #3e6f58;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    margin-right: 60px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #3e6f58;
-    font-size: 20px;
-    margin: 0 25px;
-}
-
-.sign-in-link {
-    font-weight: bold;
-}
-
-.container {
-    display: flex;
-}
-
-.main-content {
-    margin-left: 400px;
-    padding: 30px;
-    width: calc(100% - 300px);
 }
 
 .header {
@@ -92,12 +68,6 @@ header .search-bar Input:focus {
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
-}
-
-.logo {
-    font-size: 24px;
-    color: #3cb371;
-    font-weight: bold;
 }
 
 .search-bar input {
