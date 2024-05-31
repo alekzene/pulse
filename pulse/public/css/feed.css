@@ -155,12 +155,12 @@ ul li a:hover {
 }
 
 .green-create-post-container {
-    position: absolute;
+    position: relative;
     background-color: #3e6f58;
     justify-content: center;
-    left: 180px;
-    top: 60px;
-    width: 840px;
+    left: 300px;
+    top: 30px;
+    width: 670px;
     height: 81px;
     border-radius: 25px;
 }
@@ -170,7 +170,7 @@ ul li a:hover {
     position: relative;
     left: 10px;
     top: 8px;
-    width: 820px;
+    width: 650px;
     height: 64px;
     border-radius: 15px;
 }
@@ -185,25 +185,27 @@ ul li a:hover {
 }
 
 .new-post img {
+    position: absolute;
     top: 23px;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    position: absolute;
-    right: 810px;
+    right: 81vh;
     
 }
 
 .new-post input {
+    position: relative;
+    left: 25px;
     padding: 10px;
     border-radius: 15px;
     border: 3px solid #3e6f58;
     height: 39px;
-    width: 83vh;
+    width:46vh;
     border: none;
     border-color: #3cb371;
     outline: none;
-    font-size: medium;
+    font-size: x-large;
     font-weight: bold;
 }
 
@@ -212,6 +214,9 @@ ul li a:hover {
 }
 
 .new-post button {
+    position: relative;
+    top: 2px;
+    left: 50px;
     padding: 10px 20px;
     border: none;
     border-radius: 20px;

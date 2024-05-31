@@ -40,8 +40,8 @@
                         <div class="white-container"></div>
                             <div class="new-post">
                                 <img src="img/user-icon.png" alt="">
-                                <input type="text" placeholder="What are your thoughts today?">
-                            <button>Post</button>
+                                <input type="text" placeholder="What are your thoughts today?" readonly>
+                            <button>Create Post</button>
                         </div>
                     </div>
                 </div>
