@@ -1,0 +1,114 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px; /* Adjusted padding */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #3e6f58;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Place the header at the top of the viewport */
+    left: 0; /* Align the header to the left */
+    z-index: 1;
+}
+
+.main-content {
+    margin-left: 151px; /* Adjust according to sidebar width */
+    padding: 100px;
+}
+
+.feed-container {
+    background-color: White;
+    bottom: 0px;
+    width: 1280px;
+    min-height: 680px;
+    left: 263px;
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center align items */
+    padding-top: 10px; /* Add padding if necessary */
+    position: absolute; /* Relative position for proper alignment */
+    margin: auto;
+}
+
+.feed-container p {
+    font-size: xx-large;
+    position: absolute;
+    left: 50px; /* Adjust as needed */
+    top: 50px; /* Adjust as needed */
+}
+
+.search-result-container {
+    background-color: #c8d5b9;
+    position: relative;
+    justify-content: center;
+    left: 40px;
+    top: 20vh;
+    width: 1200px;
+    min-height: 500px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: visible;
+}
+
+.greend-background{
+    flex-direction: column;
+    background-color: #3e6f58;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
+
+.profile-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.profile-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    object-fit: cover; /* Ensure images are properly cropped */
+}
+
+.profile-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    word-wrap: break-word; /* Prevent long words from breaking layout */
+}
+
+.profile-card p {
+    margin: 5px 0;
+    color: #555;
+    word-wrap: break-word; /* Prevent long words from breaking layout */
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

@@ -6,34 +6,14 @@
     <title>Pulse - Homepage
     </title>
     <link rel="stylesheet" href="{{ asset('css/feed.css')}}">
+
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="img/pulse-logo.png" alt="Pulse Logo" />
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search">
-            <img src="img/icons/search.png" alt="Search Icon" class="search-icon">
-        </div>
-    </header>
-    <main>
-    <div class="container">
-        <div class="sidebar">
-            <a href="#" class="profile-link">
-                <div class="profile">
-                    <img src="img/user-icon.png" alt="">
-                    <p>Profile</p>
-                </div>
-            </a>
-            <ul>
-                <li><a href="#"><img src="img/icons/home.png" alt=""> News Feed</a></li>
-                <li><a href="#"><img src="img/icons/bell.png" alt=""> Notification</a></li>
-                <li><a href="#"><img src="img/icons/settings.png" alt=""> Settings</a></li>
-                <li><a href="#"><img src="img/icons/help.png" alt=""> Help</a></li>
-            </ul>
-        </div>
-        <main>
+        @include('templates.header')
+        @include('templates.navbar')
             <div class="main-content">
                 <div class="feed-container">
                     <div class="post-container">

@@ -1,9 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f2f5;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -23,6 +25,7 @@ header {
 header .logo img {
     height: 45px;
     margin-left: 60px;
+    margin-right: 90px;
 }
 
 header .search-bar {
@@ -151,7 +154,6 @@ ul li a:hover {
     bottom: 9px;
     width: 1280px;
     min-height: 1100px;
-    left: 0px;
     flex-direction: column; /* Arrange children in a column */
     align-items: center; /* Center align items */
     padding-top: 20px; /* Add padding if necessary */
@@ -173,6 +175,7 @@ ul li a:hover {
     box-sizing: border-box;
 
 }
+
 .green-create-post-container {
     position: absolute;
     justify-content: center;
