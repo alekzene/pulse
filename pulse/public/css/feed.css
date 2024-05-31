@@ -65,9 +65,9 @@ header .search-bar Input:focus {
     width: 250px;
     background-color: #fff;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 90px;
-    border-right: 1px solid #3e6f58;
+    border-right: 100px solid #3e6f58;
 }
 
 .profile-link {
@@ -155,7 +155,7 @@ ul li a:hover {
 }
 
 .green-create-post-container {
-    position: relative;
+    position: absolute;
     background-color: #3e6f58;
     justify-content: center;
     left: 300px;
