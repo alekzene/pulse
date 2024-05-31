@@ -35,7 +35,7 @@
                     <input type="password" name="userPass" placeholder="Password" class="input-field" required>
                     <span class="password-icon" onclick="togglePasswordVisibility()"> <img src="{{ asset('img/icons/eye.png') }}" alt=""> </span>
                 </div>
-                <a href="#" class="forgot-password">Forgot Password?</a>
+                <a href="reset-pass" class="forgot-password">Forgot Password?</a>
                 <button type="submit">Login</button>
             </form>
             <p class="signup">Don't have an account? <a href="create-acct">Sign Up</a></p>
