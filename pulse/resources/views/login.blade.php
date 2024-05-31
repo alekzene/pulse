@@ -38,7 +38,7 @@
                 <a href="#" class="forgot-password">Forgot Password?</a>
                 <button type="submit">Login</button>
             </form>
-            <p class="signup">Don't have an account? <a href="#">Sign Up</a></p>
+            <p class="signup">Don't have an account? <a href="create-acct">Sign Up</a></p>
         </div>
     </div>
 
