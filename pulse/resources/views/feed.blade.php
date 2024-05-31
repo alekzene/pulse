@@ -35,35 +35,42 @@
         </div>
         <main>
             <div class="main-content">
-                <div class="newsfeed-container">
-                    <div class="green-create-post-container">
-                        <div class="white-container"></div>
-                            <div class="new-post">
+                <div class="feed-container">
+                    <div class="post-container">
+                        <div class="green-create-post-container">
+                            <div class="white-container">
+                                <div class="new-post">
                                 <img src="img/user-icon.png" alt="">
                                 <input type="text" placeholder="What are your thoughts today?" readonly>
-                            <button>Create Post</button>
-                        </div>
-                    </div>
-                </div>
 
+                                <button id="createPostButton">Create Post</button>
+                                </div>
+                            </div>
+                        </div>
             <div class="news-feed">
                 <div class="post">
-                    <div class="post-header">
-                        <img src="profile.jpg" alt="Profile Picture">
-                        <div>
+                        <div class="post-header">
+                        <img src="img/user-profile-icon.png" alt="Profile Picture">
+                            <div>
                             <h4>Nath❤️Mich</h4>
                             <p>@NathanielMapagmahal25</p>
+                            </div>
                         </div>
-                    </div>
-                    <p>Feels Like Summer when Im with you parang Islang Pantropiko.</p>
+                        <div class="post-description">
+                            <p>Feels Like Summer when Im with you parang Islang Pantropiko.</p>
+                        </div>
                     <div class="post-images">
-                        <img src="image1.jpg" alt="Image 1">
-                        <img src="image2.jpg" alt="Image 2">
+                        <img src="img/picture-1.png" alt="">
+                        <img src="img/picture-2.png" alt="">
                     </div>
                 </div>
                 <!-- Repeat post div for more posts -->
+                         </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</main>
 </body>
 </html>

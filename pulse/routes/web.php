@@ -43,5 +43,7 @@ Route::get('/create-acct', function () {
  Route::get('/reset-pass-done', function () {
      return view('reset-pass-done');
  });
-
-Route::get('/tables', [AuthController::class, 'index']);
+ 
+ Route::get('/search-result', function () {
+    return view('search-result');
+});

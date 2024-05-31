@@ -65,9 +65,10 @@ header .search-bar Input:focus {
     width: 250px;
     background-color: #fff;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 90px;
-    border-right: 100px solid #3e6f58;
+    border-right: 1px solid #3e6f58;
+    z-index: 1;
 }
 
 .profile-link {
@@ -141,28 +142,47 @@ ul li a:hover {
 }
 
 .main-content {
-    margin-left: 250px; /* Adjust according to sidebar width */
-    padding: 300px;
+    margin-left: 151px; /* Adjust according to sidebar width */
+    padding: 100px;
 }
 
-.newsfeed-container {
-    background-color: white;
+.feed-container {
+    background-color: White;
+    bottom: 9px;
+    width: 1280px;
+    min-height: 1100px;
+    left: 0px;
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center align items */
+    padding-top: 20px; /* Add padding if necessary */
+    position: relative; /* Relative position for proper alignment */
+    margin: auto;
+}
+
+.post-container{
+    background-color: #C8D5B9;
     position: absolute;
-    width: 1275px;
-    height: 1000px;
-    left: 251px;
-    top: 89px;
-}
+    justify-content: center;
+    left: 40px;
+    top: 20px;
+    width: 1200px;
+    min-height: 1075px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+    box-sizing: border-box;
 
+}
 .green-create-post-container {
     position: absolute;
+    justify-content: center;
     background-color: #3e6f58;
     justify-content: center;
-    left: 300px;
-    top: 30px;
-    width: 670px;
-    height: 81px;
-    border-radius: 25px;
+    left: 10px;
+    top: 10px;
+    width: 1180px;
+    height: 110px;
+    border-radius: 15px;
 }
 
 .white-container {
@@ -170,15 +190,14 @@ ul li a:hover {
     position: relative;
     left: 10px;
     top: 8px;
-    width: 650px;
-    height: 64px;
+    width: 1160px;
+    height: 90px;
     border-radius: 15px;
 }
 
 .new-post {
-    display: flex;
+    bottom: 19px;
     position: relative;
-    bottom: 76px;
     left: 50px;
     align-items: center;
     padding: 20px 40px;
@@ -188,36 +207,35 @@ ul li a:hover {
     position: absolute;
     top: 23px;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    right: 81vh;
+    width: 90px;
+    height: 90px;
+    left: 0px;
     
 }
 
 .new-post input {
     position: relative;
-    left: 25px;
+    left: 70px;
     padding: 10px;
     border-radius: 15px;
     border: 3px solid #3e6f58;
-    height: 39px;
+    height: 63px;
     width:46vh;
     border: none;
-    border-color: #3cb371;
     outline: none;
     font-size: x-large;
     font-weight: bold;
 }
 
 ::placeholder{
-    color: black;
+    color: #3e6f58;
 }
 
 .new-post button {
     position: relative;
-    top: 2px;
-    left: 50px;
-    padding: 10px 20px;
+    bottom: 3px;
+    left: 550px;
+    padding: 20px 20px;
     border: none;
     border-radius: 20px;
     background-color: #3cb371;
@@ -226,12 +244,16 @@ ul li a:hover {
 }
 
 .news-feed {
-    max-height: 70vh;
+    max-height: 100vh;
     overflow-y: auto;
     padding-right: 10px;
 }
 
 .post {
+    top: 170px;
+    width: 1115px;
+    height: 850px;
+    position: absolute;
     background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
@@ -242,32 +264,44 @@ ul li a:hover {
 .post-header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .post-header img {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     margin-right: 10px;
 }
 
 .post-header div h4 {
-    margin: 0;
+    margin: 10px;
+    font-size: x-large;
 }
 
 .post-header div p {
-    margin: 0;
-    color: #888;
+    margin: 0px;
+    margin-left: 8px;
+    color: black;
+    font-size: large;
 }
+.post-description p{
+    font-size: large;
+    align-items: left;
+    margin-left: 25px;
+    margin-bottom: 30px;
 
+}
 .post-images {
     display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
 
 .post-images img {
     width: calc(50% - 5px);
     margin-right: 10px;
+    object-fit: contain;
 }
 
 .post-images img:last-child {

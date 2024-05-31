@@ -42,6 +42,12 @@ header nav a {
     font-weight: 500;
 }
 
+header nav a:hover {
+    background-color: White; /* Optional: change background color on hover */
+    color: #3e6f58; /* Change text color on hover */
+    font-weight: bold; /* Bold the text on hover */
+}
+
 main {
     text-align: center;
     padding: 60px 20px;
