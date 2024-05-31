@@ -10,11 +10,11 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images/Pulse Logo.png" alt="Pulse Logo" />
+            <img src="img/pulse-logo.png" alt="Pulse Logo" />
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Search">
-            <img src="images/Group 20.png" alt="Search Icon" class="search-icon">
+            <img src="img/icons/search.png" alt="Search Icon" class="search-icon">
         </div>
     </header>
     <main>
@@ -22,26 +22,30 @@
         <div class="sidebar">
             <a href="#" class="profile-link">
                 <div class="profile">
-                    <img src="images/image 107.png" alt="">
+                    <img src="img/user-icon.png" alt="">
                     <p>Profile</p>
                 </div>
             </a>
             <ul>
-                <li><a href="#"><img src="images/Home Icon.png" alt=""> News Feed</a></li>
-                <li><a href="#"><img src="images/Bell Icon.png" alt=""> Notification</a></li>
-                <li><a href="#"><img src="images/Settings Icon.png" alt=""> Settings</a></li>
-                <li><a href="#"><img src="images/Help Icon.png" alt=""> Help</a></li>
+                <li><a href="#"><img src="img/icons/home.png" alt=""> News Feed</a></li>
+                <li><a href="#"><img src="img/icons/bell.png" alt=""> Notification</a></li>
+                <li><a href="#"><img src="img/icons/settings.png" alt=""> Settings</a></li>
+                <li><a href="#"><img src="img/icons/help.png" alt=""> Help</a></li>
             </ul>
         </div>
-        <div class="main-content">
-            <div class="header">
+        <main>
+            <div class="main-content">
+                <div class="newsfeed-container">
+                    <div class="green-create-post-container">
+                        <div class="white-container"></div>
+                            <div class="new-post">
+                                <img src="img/user-icon.png" alt="">
+                                <input type="text" placeholder="What are your thoughts today?">
+                            <button>Post</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="new-post">
-                <img src="profile.jpg" alt="Profile Picture">
-                <input type="text" placeholder="What are your thoughts today?">
-                <button>Post</button>
-            </div>
+
             <div class="news-feed">
                 <div class="post">
                     <div class="post-header">

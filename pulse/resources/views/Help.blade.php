@@ -10,7 +10,7 @@
     <body>
         <header>
             <div class="logo">
-                <img src="images/Pulse Logo.png" alt="" />
+                <img src="img/pulse-logo.png" alt="" />
             </div>
             <nav>
                 <a href="#">Help</a>

@@ -13,6 +13,11 @@ header {
     padding: 20px 20px; /* Adjusted padding */
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #3e6f58;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Place the header at the top of the viewport */
+    left: 0; /* Align the header to the left */
+    z-index: 1;
 }
 
 header .logo img {
@@ -48,7 +53,8 @@ header .search-icon {
     height: 20px; /* Adjust as needed */
 }
 header .search-bar Input:focus {
-    border-color: solid #3e6f58;
+    border-color: #3e6f58 !important;
+    outline: none;
 }
 
 .container {
@@ -60,7 +66,8 @@ header .search-bar Input:focus {
     background-color: #fff;
     height: 100vh;
     position: fixed;
-    top: 92px;
+    top: 90px;
+    border-right: 1px solid #3e6f58;
 }
 
 .profile-link {
@@ -134,52 +141,74 @@ ul li a:hover {
 }
 
 .main-content {
-    margin-left: 400px;
-    padding: 30px;
-    width: calc(100% - 300px);
+    margin-left: 250px; /* Adjust according to sidebar width */
+    padding: 300px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+.newsfeed-container {
+    background-color: white;
+    position: absolute;
+    width: 1275px;
+    height: 1000px;
+    left: 251px;
+    top: 89px;
 }
 
-.logo {
-    font-size: 24px;
-    color: #3cb371;
-    font-weight: bold;
+.green-create-post-container {
+    position: absolute;
+    background-color: #3e6f58;
+    justify-content: center;
+    left: 180px;
+    top: 60px;
+    width: 840px;
+    height: 81px;
+    border-radius: 25px;
 }
 
-.search-bar input {
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ddd;
-    width: 300px;
+.white-container {
+    background-color: white;
+    position: relative;
+    left: 10px;
+    top: 8px;
+    width: 820px;
+    height: 64px;
+    border-radius: 15px;
 }
 
 .new-post {
     display: flex;
+    position: relative;
+    bottom: 76px;
+    left: 50px;
     align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+    padding: 20px 40px;
 }
 
 .new-post img {
+    top: 23px;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 810px;
+    
 }
 
 .new-post input {
-    flex: 1;
     padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ddd;
-    margin-right: 10px;
+    border-radius: 15px;
+    border: 3px solid #3e6f58;
+    height: 39px;
+    width: 83vh;
+    border: none;
+    border-color: #3cb371;
+    outline: none;
+    font-size: medium;
+    font-weight: bold;
+}
+
+::placeholder{
+    color: black;
 }
 
 .new-post button {
