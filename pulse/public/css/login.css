@@ -151,6 +151,10 @@ button:hover {
     bottom: 40px;
 }
 
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
 .signup {
     margin-top: 20px;
     color: #888;
