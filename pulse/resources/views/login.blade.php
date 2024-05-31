@@ -9,11 +9,9 @@
 <body>
     <div class="container">
         <div class="left-panel">
-
             <div class="green-container">
                 <h1>Capture your thoughts.<br>Share your<br>voice.</h1>
             </div>
-
             <img src="{{ asset('img/mockup2x.png') }}" alt="Phone Image">
         </div>
         <div class="right-panel">
@@ -22,10 +20,19 @@
             </div>
             <h2>Welcome Back</h2>
             <p>Please login to your account</p>
-            <form>
-                <input type="text" placeholder="Username" class="input-field">
+
+            <!-- Display error message if login fails -->
+            @if ($errors->has('loginError'))
+                <div class="alert alert-danger" role="alert">
+                    {{ $errors->first('loginError') }}
+                </div>
+            @endif
+
+            <form method="POST" action="{{ url('login') }}">
+                @csrf
+                <input type="text" name="userName" placeholder="Username" class="input-field" required>
                 <div class="password-container">
-                    <input type="password" placeholder="Password" class="input-field">
+                    <input type="password" name="userPass" placeholder="Password" class="input-field" required>
                     <span class="password-icon" onclick="togglePasswordVisibility()"> <img src="{{ asset('img/icons/eye.png') }}" alt=""> </span>
                 </div>
                 <a href="#" class="forgot-password">Forgot Password?</a>
