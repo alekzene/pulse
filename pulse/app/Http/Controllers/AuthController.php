@@ -67,7 +67,7 @@ class AuthController extends Controller
         ], [
             'password.min' => 'The password must be at least 8 characters long.',
         ]);
-        
+
         DB::table('UserAuthen')->insert([
             'userName' => $request->username,
             'userPass' => Hash::make($request->password), // Password Hased
@@ -78,6 +78,34 @@ class AuthController extends Controller
 
         return redirect()->route('login')->with('success', 'Account created successfully. Please login.');
     }
+
+    public function resetPassword(Request $request)
+{
+    $request->validate([
+        'username' => 'required|string',
+        'password' => 'required|string|min:8|confirmed',
+    ], [
+        'password.min' => 'The password must be at least 8 characters long.',
+    ]);
+
+    $user = DB::table('UserAuthen')
+        ->where('userName', $request->username)
+        ->first();
+
+    if (!$user) {
+        return back()->withErrors([
+            'resetError' => 'Username not found.',
+        ])->withInput();
+    }
+
+    DB::table('UserAuthen')
+        ->where('userName', $request->username)
+        ->update([
+            'userPass' => Hash::make($request->password),
+        ]);
+
+    return redirect()->route('reset-pass-done');
+}
 
     public function Help(Request $request) {
         return redirect()->route('help');

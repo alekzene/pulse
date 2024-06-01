@@ -55,6 +55,10 @@ Route::get('/reset-pass', function () {
     return view('reset-pass');
 });
 
+Route::post('/reset-password', [AuthController::class, 
+    'resetPassword'
+])->name('reset-password');
+
 Route::get('/reset-pass-done', function () {
     return view('reset-pass-done');
 })->name('reset-pass-done');
