@@ -18,7 +18,7 @@
                 <div class="privacy-panel">
                     <div class="credentials-panel">
                         <h1><img src="img/icons/email.png" alt=""> Change Email</h1>
-                        <input type="text" name="userName" placeholder="Username" class="input-field" required>
+                        <input type="text" name="userName" placeholder="New E-mail" class="input-field" required>
                         <div class ="buttons">
                             <button class="Cancel">Cancel</button>
                             <button class="Update">Update</button>

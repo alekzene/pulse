@@ -19,7 +19,7 @@
                 <div class="credentials-panel">
                     <h1>Privacy</h1>
                         <ul>
-                            <li><img src="img/icons/email.png" alt=""> Email:‎ ‎ ‎ ‎ ‎ ‎ ‎ <input type="text" name="userName" placeholder="Username" class="input-field" readonly> <a href="#" class="Change-Email"> Change</a></li> 
+                            <li><img src="img/icons/email.png" alt=""> Email:‎ ‎ ‎ ‎ ‎ ‎ ‎ <input type="text" name="userName" placeholder="E-Mail" class="input-field" readonly> <a href="#" class="Change-Email"> Change</a></li> 
                             <li><img src="img/icons/lock.png" alt=""> Password: <input type="password" name="userPass" placeholder="Password" class="input-field" readonly> <a href="#" class="Change-Password"> Change</a></li>
                         </ul>
                 </div>
