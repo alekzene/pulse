@@ -27,6 +27,12 @@ Route::post('/create-acct', [AuthController::class,
     'createAccount'
 ])->name('create-acct');
 
+///////////////////
+Route::get('/tables', [AuthController::class, 
+    'index'                 //Use this for chekcking users in the database for logging in
+])->name('tables');         //just use the tables path
+//////////////////
+
 Route::get('/help', function () {
     return view('help');
 })->name('help');

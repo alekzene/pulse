@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\UserAuthen;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -34,7 +35,12 @@ class AuthController extends Controller
                   ->where('userName', $request->userName)
                   ->first();
 
-         if ($user && $user->userPass === $request->userPass) {    //for checking if user exist and the password matches
+        //  if ($user && $user->userPass === $request->userPass) {    //for checking if user exist and the password matches
+        //     Auth::loginUsingId($user->userID);
+        //     return redirect()->intended('feed');
+        // }
+
+        if ($user && Hash::check($request->userPass, $user->userPass)) {    //for checking if user exist and the password matches also adds password hashing
             Auth::loginUsingId($user->userID);
             return redirect()->intended('feed');
         }
@@ -42,10 +48,6 @@ class AuthController extends Controller
         return back()->withErrors([
             'loginError' => 'Invalid username or password.',
         ])->withInput();
-
-        // return redirect('login')->withErrors([
-        //     'userName' => 'The provided credentials do not match our records.',
-        // ]);
     }
 
     public function logout()
@@ -56,11 +58,9 @@ class AuthController extends Controller
 
     public function createAccount(Request $request)
     {
-        // Your logic for creating an account goes here
-        // For example, you can validate the request and save the user to the database
         $request->validate([
             'name' => 'required|string|max:255',
-            'gender' => 'required|string|max:255',
+            'gender' => 'required|string|in:Male,Female',
             'username' => 'required|string|max:255|unique:UserAuthen,userName',
             'email' => 'required|string|email|max:255|unique:UserAuthen,email',
             'password' => 'required|string|min:8|confirmed',
@@ -68,7 +68,7 @@ class AuthController extends Controller
 
         DB::table('UserAuthen')->insert([
             'userName' => $request->username,
-            'userPass' => $request->password, // Consider hashing the password
+            'userPass' => Hash::make($request->password), // Password Hased
             'name' => $request->name,
             'gender' => $request->gender,
             'email' => $request->email,
