@@ -30,7 +30,10 @@ header .logo img {
 header nav a{
     background-color: White; /* Optional: change background color on hover */
     color: #3e6f58; /* Change text color on hover */
-    font-weight: bold; /* Bold the text on hover */
+}
+
+.sign-in {
+    font-weight: 150px;
 }
 
 .menu {
