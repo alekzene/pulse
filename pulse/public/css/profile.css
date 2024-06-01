@@ -1,0 +1,110 @@
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 250px; 
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    background-color: rgba(200, 213, 185, 1);
+    padding: 50px;
+    margin-left: 100px;
+    margin-right: 90px;
+    border-radius: 15px;
+    gap: 50px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 975px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.display-name, .username {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.display-name {
+    font-size: 30px;
+}
+
+.username {
+    font-size: 13px;
+    color: grey;
+}
+
+.add-friend-button {
+    background-color: rgba(62, 111, 88, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.bio {
+    font-size: 13px;
+}
+
+.about-card {
+    background-color: white;
+    height: 315px;
+    width: 600px;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.about-me-label {
+    margin: 0px;
+}
+
+.about-me-data {
+    margin-top: 5px;
+}
+
+.about-me-data div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about-me-data p {
+    margin: 0px;
+}
