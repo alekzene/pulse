@@ -4,8 +4,8 @@
     </div>
 
     <nav class="menu">
-        <a class="help" href="#"> Help </a>
-        <a class="sign-in" href="#"> Sign In </a>
+        <a class="help" href="help"> Help </a>
+        <a class="sign-in" href="{{ route('login') }}"> Sign In </a>
     </nav>
 </header>
 

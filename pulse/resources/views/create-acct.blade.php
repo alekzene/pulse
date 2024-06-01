@@ -20,6 +20,8 @@
 
         </div>
         <div class="right-panel">
+            <form method="POST" action="{{ route('create-acct') }}">
+                @csrf
             <div class="white-container">
                 <h2>Creating An Account</h2>
                 <form>

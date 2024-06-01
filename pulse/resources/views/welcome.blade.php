@@ -21,11 +21,16 @@
                         creativity pulses.
                         <br />Share your stories, connect with
                         others, and make your mark.</p>
-                    <div class="buttons">
-                        <button class="how-it-works">How does it work?</button>
-                        <button class="get-started">Get Started</button>
-                    </div>
-                </div>
+                        <div class="buttons">
+                            <form method="GET" action="{{ route('help')}}">
+                            @csrf
+                              <button class="how-it-works">How does it work?</button>
+                            </form>
+                            <form method="GET" action="{{ route('create-acct') }}">
+                            @csrf
+                              <button type="submit" class="get-started">Get Started</button>
+                            </form>
+                          </div>
                 <div class="image">
                     <img src="img/mockup.png" alt="" />
                 </div>

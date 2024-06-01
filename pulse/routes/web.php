@@ -13,7 +13,9 @@ Route::get('/login', function () {
 
 Route::get('/help', function () {
     return view('help');
-});
+})->name('help');
+
+Route::post('/help', [AuthController::class, 'Help'] )->name('help');
 
 Route::get('/feed', function () {
     return view('feed');
@@ -37,13 +39,15 @@ Route::get('/reset-pass', function () {
 });
 
 Route::get('/create-acct', function () {
-     return view('create-acct');
-});
+    return view('create-acct');
+})->name('create-acct');
+
+Route::post('/create-acct', [AuthController::class, 'createAccount'])->name('create-acct');
 
  Route::get('/reset-pass-done', function () {
      return view('reset-pass-done');
  });
- 
+
  Route::get('/search-result', function () {
     return view('search-result');
 });

@@ -53,4 +53,31 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('login');
     }
+
+    public function createAccount(Request $request)
+    {
+        // Your logic for creating an account goes here
+        // For example, you can validate the request and save the user to the database
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'gender' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:UserAuthen,userName',
+            'email' => 'required|string|email|max:255|unique:UserAuthen,email',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        DB::table('UserAuthen')->insert([
+            'userName' => $request->username,
+            'userPass' => $request->password, // Consider hashing the password
+            'name' => $request->name,
+            'gender' => $request->gender,
+            'email' => $request->email,
+        ]);
+
+        return redirect()->route('login')->with('success', 'Account created successfully. Please login.');
+    }
+
+    public function Help(Request $request) {
+        return redirect()->route('help');
+    }
 }
