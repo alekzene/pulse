@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -46,4 +50,20 @@ Route::get('/reset-pass-done', function () {
 
  Route::get('/search-result', function () {
     return view('search-result');
+});
+
+Route::get('/notification', function () {
+    return view('notification');
+});
+
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+
+Route::get('/privacy-change-email', function () {
+    return view('privacy-change-email');
+});
+
+Route::get('/privacy-change-password', function () {
+    return view('privacy-change-password');
 });

@@ -8,21 +8,6 @@ body {
     flex-direction: column;
     overflow-y: hidden;
 }
-
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 20px; /* Adjusted padding */
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #3e6f58;
-    position: fixed; /* Make the header fixed */
-    top: 0; /* Place the header at the top of the viewport */
-    left: 0; /* Align the header to the left */
-    z-index: 1;
-}
-
 .search-main-content {
     margin-left: 151px; /* Adjust according to sidebar width */
     padding: 100px;

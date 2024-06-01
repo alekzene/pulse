@@ -7,7 +7,7 @@
     </title>
     <link rel="stylesheet" href="{{ asset('css/feed.css')}}">
 
-    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 
 </head>

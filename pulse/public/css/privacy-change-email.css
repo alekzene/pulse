@@ -1,0 +1,105 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.privacy-container {
+    margin-left: 151px; /* Adjust according to sidebar width */
+    padding: 100px;
+    
+}
+
+.privacy-content {
+    background-color: White;
+    bottom: 100px;
+    width: 1280px;
+    min-height: 1100px;
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center align items */
+    padding-top: 20px; /* Add padding if necessary */
+    position: relative; /* Relative position for proper alignment */
+    margin: auto;
+
+}
+
+.privacy-panel {
+    background-color: #c8d5b9;
+    position: relative;
+    justify-content: center;
+    left: 40px;
+    top: 2vh;
+    width: 1200px;
+    min-height: 600px;
+    border-radius: 25px;
+}
+
+.credentials-panel {
+    background-color: white;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 1135px;
+    min-height: 560px;
+    border-radius: 25px;
+}
+
+h1 {
+    position: relative;
+    font-size: 50px;
+    color: black;
+    margin-left: 350px;
+    margin-top: 130px;
+}
+
+h1 img {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.input-field {
+    padding: 25px;
+    border: 1px solid #3E6F58;
+    border-radius: 25px;
+    width: 450px;
+    box-sizing: border-box;
+    background-color: white;
+    height: auto;
+    font-size: larger;
+    position: relative;
+    left: 330px;
+    outline: none;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: absolute;
+    left: 334px;
+    bottom: 150px;
+}
+
+.buttons button {
+    padding: 30px 70px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.buttons .Cancel {
+    background-color: #d0dbc7;
+    color: #333;
+}
+
+.buttons .Update {
+    background-color: #3E6F58;
+    color: white;
+}

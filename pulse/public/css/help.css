@@ -104,7 +104,7 @@ main p {
     align-items: center;
     text-align: center;
     border-radius: 25px;
-    height: 85%;
+    height: 80%;
     top: 400px;
 }
 
@@ -176,4 +176,14 @@ main p {
     position: absolute;
     top: 505px;
     left: 725px;
+}
+
+.text1 p {
+    font-size: 30px;
+    color: #000000;
+    text-align: left;
+    position: absolute;
+    left: 100px;
+    top: 1300px; /* Position the element at the bottom */
+    line-height: 1.5;
 }

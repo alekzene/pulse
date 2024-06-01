@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pulse - Capture Your Thoughts</title>
         <link rel="stylesheet" href="{{ asset('css/help.css')}}">
+        <link rel="stylesheet" href="{{assert('css/footer.css')}}">
         
     </head>
     <body>
@@ -58,7 +59,16 @@
                             <br>connect on a deeper level 
                             <br>with our dynamic 
                             <br>engagement tools.</p>
-                </div>
+            </div>
+        </div>
+        <div class="text1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                <br>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                <br>laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                <br>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                <br>sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
         </div>
     </body>
 </html>
+

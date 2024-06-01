@@ -1,0 +1,115 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.privacy-container {
+    margin-left: 151px; /* Adjust according to sidebar width */
+    padding: 100px;
+}
+
+.privacy-content {
+    background-color: White;
+    bottom: 100px;
+    width: 1280px;
+    min-height: 1100px;
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center align items */
+    padding-top: 20px; /* Add padding if necessary */
+    position: relative; /* Relative position for proper alignment */
+    margin: auto;
+}
+
+.privacy-panel {
+    background-color: #c8d5b9;
+    position: relative;
+    justify-content: center;
+    left: 40px;
+    top: 10vh;
+    width: 1200px;
+    min-height: 500px;
+    border-radius: 25px;
+}
+
+.credentials-panel {
+    background-color: white;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 1135px;
+    min-height: 460px;
+    border-radius: 25px;
+}
+
+h1 {
+    position: relative;
+    font-size: 50px;
+    color: black;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.credentials-panel ul {
+    list-style: none;
+    padding: 10px;
+    justify-content: center;
+}
+
+.credentials-panel ul li {
+    padding: 20px 19px;
+    font-size: 30px;
+    display: flex;
+}
+
+.credentials-panel ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.credentials-panel ul li img {
+    list-style-type: none;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+}
+
+.credentials-panel ul li a:hover {
+    background-color: White; /* Optional: change background color on hover */
+    color: #3e6f58; /* Change text color on hover */
+    font-weight: bold; /* Bold the text on hover */
+}
+
+.input-field {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 25px;
+    width: 550px;
+    background-color: #c8d5b9;
+    height: auto;
+    bottom: 13px;
+    font-size: larger;
+    position: relative;
+    left: 50px;
+    outline: none;
+}
+
+.credentials-panel ul li .Change-Email {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 3px;
+}
+
+.credentials-panel ul li .Change-Password {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 3px;
+}
