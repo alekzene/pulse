@@ -22,12 +22,12 @@
         </div>
         <div class="right-panel">
             <div class="sage-container">
-                <form>
                     <img src="{{ asset('img/icons/verify.png') }}" alt="">
                     <h2>Password Changed!</h2>
                     <h3>Your password has been changed successfully.</h3>
-                    <button type="submit">Proceed</button>
-                </form>
+                    <form method="GET" action="{{ route('login') }}">
+                        <button type="submit">Proceed</button>
+                    </form>
 
             </div>
         

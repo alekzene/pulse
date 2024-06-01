@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -44,9 +44,9 @@ Route::get('/create-acct', function () {
 
 Route::post('/create-acct', [AuthController::class, 'createAccount'])->name('create-acct');
 
- Route::get('/reset-pass-done', function () {
-     return view('reset-pass-done');
- });
+Route::get('/reset-pass-done', function () {
+    return view('reset-pass-done');
+})->name('reset-pass-done');
 
  Route::get('/search-result', function () {
     return view('search-result');

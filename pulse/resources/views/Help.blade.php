@@ -13,8 +13,8 @@
                 <img src="img/pulse-logo.png" alt="" />
             </div>
             <nav>
-                <a href="#">Help</a>
-                <a href="#">Sign In</a>
+                <a href="help">Help</a>
+                <a href="{{ route('login') }}">Sign In</a>
             </nav>
         </header>
         <main>

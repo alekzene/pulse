@@ -80,4 +80,9 @@ class AuthController extends Controller
     public function Help(Request $request) {
         return redirect()->route('help');
     }
+
+    public function resetpassdone(Request $request)
+    {
+        return redirect()->route('login');
+    }
 }
