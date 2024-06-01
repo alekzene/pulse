@@ -35,11 +35,6 @@ class AuthController extends Controller
                   ->where('userName', $request->userName)
                   ->first();
 
-        //  if ($user && $user->userPass === $request->userPass) {    //for checking if user exist and the password matches
-        //     Auth::loginUsingId($user->userID);
-        //     return redirect()->intended('feed');
-        // }
-
         if ($user && Hash::check($request->userPass, $user->userPass)) {    //for checking if user exist and the password matches also adds password hashing
             Auth::loginUsingId($user->userID);
             return redirect()->intended('feed');
