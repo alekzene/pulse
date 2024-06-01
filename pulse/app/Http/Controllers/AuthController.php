@@ -35,11 +35,6 @@ class AuthController extends Controller
                   ->where('userName', $request->userName)
                   ->first();
 
-        //  if ($user && $user->userPass === $request->userPass) {    //for checking if user exist and the password matches
-        //     Auth::loginUsingId($user->userID);
-        //     return redirect()->intended('feed');
-        // }
-
         if ($user && Hash::check($request->userPass, $user->userPass)) {    //for checking if user exist and the password matches also adds password hashing
             Auth::loginUsingId($user->userID);
             return redirect()->intended('feed');
@@ -80,32 +75,32 @@ class AuthController extends Controller
     }
 
     public function resetPassword(Request $request)
-{
-    $request->validate([
-        'username' => 'required|string',
-        'password' => 'required|string|min:8|confirmed',
-    ], [
-        'password.min' => 'The password must be at least 8 characters long.',
-    ]);
-
-    $user = DB::table('UserAuthen')
-        ->where('userName', $request->username)
-        ->first();
-
-    if (!$user) {
-        return back()->withErrors([
-            'resetError' => 'Username not found.',
-        ])->withInput();
-    }
-
-    DB::table('UserAuthen')
-        ->where('userName', $request->username)
-        ->update([
-            'userPass' => Hash::make($request->password),
+    {
+        $request->validate([
+            'username' => 'required|string',
+            'password' => 'required|string|min:8|confirmed',
+        ], [
+            'password.min' => 'The password must be at least 8 characters long.',
         ]);
 
-    return redirect()->route('reset-pass-done');
-}
+        $user = DB::table('UserAuthen')
+            ->where('userName', $request->username)
+            ->first();
+
+        if (!$user) {
+            return back()->withErrors([
+                'resetError' => 'Username not found.',
+            ])->withInput();
+        }
+
+        DB::table('UserAuthen')
+            ->where('userName', $request->username)
+            ->update([
+                'userPass' => Hash::make($request->password),
+            ]);
+
+        return redirect()->route('reset-pass-done');
+    }
 
     public function Help(Request $request) {
         return redirect()->route('help');

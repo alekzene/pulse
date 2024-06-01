@@ -20,14 +20,6 @@
             </div>
             <h2>Welcome Back</h2>
             <p>Please login to your account</p>
-
-            <!-- Display error message if login fails -->
-            @if ($errors->has('loginError'))
-                <div class="alert alert-danger" role="alert">
-                    {{ $errors->first('loginError') }}
-                </div>
-            @endif
-
             <form method="POST" action="{{ url('login') }}">
                 @csrf
                 <input type="text" name="userName" placeholder="Username" class="input-field" required>
@@ -36,7 +28,15 @@
                     <span class="password-icon" onclick="togglePasswordVisibility()"> <img src="{{ asset('img/icons/eye.png') }}" alt=""> </span>
                 </div>
                 <a href="reset-pass" class="forgot-password">Forgot Password?</a>
+
                 <button type="submit">Login</button>
+                
+                @if ($errors->has('loginError'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ $errors->first('loginError') }}
+                    </div>
+                @endif
+                
             </form>
             <p class="signup">Don't have an account? <a href="create-acct">Sign Up</a></p>
         </div>
