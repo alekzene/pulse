@@ -18,6 +18,7 @@
                         <th>User ID</th>
                         <th>Username</th>
                         <th>Password</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,6 +27,7 @@
                             <td>{{ $user->userID }}</td>
                             <td>{{ $user->userName }}</td>
                             <td>{{ $user->userPass }}</td>
+                            <td>{{ $user->email }}</td> 
                         </tr>
                     @endforeach
                 </tbody>

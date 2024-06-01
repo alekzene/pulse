@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\UserAuthen;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
 
 class AuthController extends Controller
 {
@@ -20,7 +21,6 @@ class AuthController extends Controller
         // Fetch all users from the UserAuthen table
         $users = DB::table('UserAuthen')->get();
 
-        // Pass the users to the view
         return view('tables', compact('users'));
     }
 
@@ -64,8 +64,10 @@ class AuthController extends Controller
             'username' => 'required|string|max:255|unique:UserAuthen,userName',
             'email' => 'required|string|email|max:255|unique:UserAuthen,email',
             'password' => 'required|string|min:8|confirmed',
+        ], [
+            'password.min' => 'The password must be at least 8 characters long.',
         ]);
-
+        
         DB::table('UserAuthen')->insert([
             'userName' => $request->username,
             'userPass' => Hash::make($request->password), // Password Hased

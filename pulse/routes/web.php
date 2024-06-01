@@ -30,7 +30,7 @@ Route::post('/create-acct', [AuthController::class,
 ///////////////////
 Route::get('/tables', [AuthController::class, 
     'index'                 //Use this for chekcking users in the database for logging in
-])->name('tables');         //just use the tables path
+])->name('tables');         //just use the tables path //also shows the unhashed password
 //////////////////
 
 Route::get('/help', function () {

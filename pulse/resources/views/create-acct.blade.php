@@ -39,6 +39,12 @@
                         <input type="password" name="password_confirmation" placeholder="Confirm Password" class="input-field" id="confirm-password" required>
                         <span class="password-icon" onclick="togglePasswordVisibility()"> <img src="{{ asset('img/icons/eye.png') }}" alt=""> </span>
                     </div>
+
+                    @if($errors->has('password'))
+                        <div class="error-message" style="background-color: #ffcccc; padding: 5px; margin-bottom: 10px;">
+                            {{ $errors->first('password') }}
+                        </div>
+                    @endif 
                     
                     <button type="submit">Register</button>
                 </div>
