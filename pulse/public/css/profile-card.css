@@ -1,0 +1,11 @@
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 315px;
+    width: 200px;
+}
