@@ -23,29 +23,30 @@ header {
     z-index: 1;
 }
 
-.main-content {
+.search-main-content {
     margin-left: 151px; /* Adjust according to sidebar width */
     padding: 100px;
+    
 }
 
 .feed-container {
     background-color: White;
-    bottom: 0px;
+    bottom: 100px;
     width: 1280px;
-    min-height: 680px;
-    left: 263px;
+    min-height: 1100px;
     flex-direction: column; /* Arrange children in a column */
     align-items: center; /* Center align items */
-    padding-top: 10px; /* Add padding if necessary */
-    position: absolute; /* Relative position for proper alignment */
+    padding-top: 20px; /* Add padding if necessary */
+    position: relative; /* Relative position for proper alignment */
     margin: auto;
+
 }
 
 .feed-container p {
     font-size: xx-large;
-    position: absolute;
+    position: relative;
     left: 50px; /* Adjust as needed */
-    top: 50px; /* Adjust as needed */
+    top: 0px; /* Adjust as needed */
 }
 
 .search-result-container {
@@ -53,7 +54,7 @@ header {
     position: relative;
     justify-content: center;
     left: 40px;
-    top: 20vh;
+    top: 0vh;
     width: 1200px;
     min-height: 500px;
     border-radius: 25px;
@@ -63,36 +64,36 @@ header {
     overflow-y: visible;
 }
 
-.greend-background{
-    flex-direction: column;
-    background-color: #3e6f58;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-}
-
 .profile-cards {
+    position: relative;
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: nowrap;
+    width: 2000px;
+    height: 450px;
+    padding: 20px;
+    margin: 10px;
 }
 
 .profile-card {
     background-color: white;
-    padding: 20px;
+    position: relative;
+    left: 50px;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     width: 300px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    box-sizing: border-box;  /*Ensure padding is included in width */
 }
 
 .profile-card img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+    position: relative;
+    top: 250px;
     object-fit: cover; /* Ensure images are properly cropped */
 }
 
@@ -100,12 +101,79 @@ header {
     margin: 10px 0;
     font-size: 20px;
     word-wrap: break-word; /* Prevent long words from breaking layout */
+    position: relative;
+    top: 190px;
+    font-size: x-large;
 }
+
 
 .profile-card p {
     margin: 5px 0;
-    color: #555;
+    color: black;
     word-wrap: break-word; /* Prevent long words from breaking layout */
+    position: relative;
+    align-items: left;
+    top: 180px;
+    font-size: 20px;
+    left: 0px;
+
+}
+
+.icon-container {
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px; /* Space between the icons */
+    margin-top: 160px; /* Adjust as needed */
+    object-fit: contain;
+}
+
+.icons {
+    width: 20pxpx; /* Initial width */
+    height: 20pxpx; /* To maintain aspect ratio *//* To prevent icon from overflowing its container */
+    cursor: pointer; /* Optional: Add pointer cursor for better UX */
+    
+}
+
+.icons img{
+    margin-bottom: 450px;
+    width: 35px; /* Initial width */
+    height: 35px; /* To maintain aspect ratio *//* To prevent icon from overflowing its container */
+    cursor: pointer; /* Optional: Add pointer cursor for better UX */
+    
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.profile-card p1{
+    margin: 5px;
+    color: black;
+    word-wrap: break-word; /* Prevent long words from breaking layout */
+    position: relative;
+    align-items: left;
+    top: 50px;
+    font-size: 20px;
+    margin-right: 100px;
+
+}
+
+.green-background-container{
+    border-radius: 15px 15px 0 0;
+    flex-direction: column;
+    background-color: #3e6f58;
+    align-items: center;
+    width: 300px;
+    height: 130px;
+    display: flex;
+    justify-content: center; /* Center align content vertically */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .profile-card:hover {
