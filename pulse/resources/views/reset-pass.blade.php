@@ -24,17 +24,18 @@
                 @csrf
                 <div class="white-container">
                     <h2>Reset Password</h2>
-                    @if($errors->has('resetError'))
-                        <div class="error-message" style="background-color: #ffcccc; padding: 5px; margin-bottom: 10px;">
-                            {{ $errors->first('resetError') }}
-                        </div>
-                    @endif
                     <input type="text" name="username" placeholder="Username" class="input-field" required>
                     <div class="password-container">
                         <input type="password" name="password" placeholder="Password" class="input-field" required>
                         <input type="password" name="password_confirmation" placeholder="Confirm Password" class="input-field" required>
                         <span class="password-icon" onclick="togglePasswordVisibility()"> <img src="{{ asset('img/icons/eye.png') }}" alt=""> </span>
                     </div>
+
+                    @if($errors->has('password'))
+                        <div class="error-message" style="background-color: #ffcccc; padding: 5px; margin-bottom: 8px;">
+                            {{ $errors->first('password') }}
+                        </div>
+                    @endif
                     
                     <button type="submit">Reset</button>
                 </div>
