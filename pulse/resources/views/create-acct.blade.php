@@ -27,7 +27,11 @@
                 <form>
                     <div class="horizontal-fields">
                         <input type="text" placeholder="Name" class="input-field">
-                        <input type="text" placeholder="Gender" class="input-field">
+                        <select name="gender" class="input-field" required>
+                            <option value="" disabled selected>Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
                     </div>
                     <input type="text" placeholder="Username" class="input-field">
                     <input type="text" placeholder="Email" class="input-field">

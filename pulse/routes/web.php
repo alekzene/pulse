@@ -7,9 +7,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
 
 Route::get('/help', function () {
     return view('help');
@@ -26,13 +29,6 @@ Route::get('/feed', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
-
-// Route::get('/login', function () {
-//     return view('login');
-// });
-
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
 
 Route::get('/reset-pass', function () {
     return view('reset-pass');
