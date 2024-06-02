@@ -77,18 +77,14 @@ Route::get('/privacy', function () {
 
 Route::get('/privacy-change-email', function () {
     return view('privacy-change-email');
-});
+})->name('privacy-change-email');
 
 Route::get('/privacy-change-password', function () {
     return view('privacy-change-password');
-});
+})->name('privacy-change-password');
 
 Route::get('/create-post', function () {
     return view('create-post');
-});
-
-Route::get('/sample', function () {
-    return view('sample');
 });
 
 Route::post('/logout', [AuthController::class,
