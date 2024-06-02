@@ -2,11 +2,11 @@ body {
     font-family: "Plus Jakarta Sans", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
+    background-color: white;
 }
 
 .main-content {
@@ -24,32 +24,4 @@ body {
     padding-top: 20px; /* Add padding if necessary */
     position: relative; /* Relative position for proper alignment */
     margin: auto;
-}
-
-.warning-panel {
-    background-color: white;
-    position: relative;
-    justify-content: center;
-    left: 150px;
-    top: 0vh;
-    width: 1000px;
-    min-height: 200px;
-    border-radius: 25px;
-    margin-bottom: 25px;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: visible;
-}
-
-h1 {
-    color: Black;
-    font-size: 50px;
-    position: relative;
-}
-
-p {
-    color: black;
-    font-size: 30px;
-    position: relative;
-    left: 100px; /* Adjust as needed */
 }
