@@ -66,15 +66,11 @@
                 <p><strong>© 2024 Pulse. All rights reserved.</strong></p>
             </div>
             <div class="mean">
-                <p>
-                    <br>Pulse is committed to making a positive impact on our planet. 
-                <br>We actively participate in environmental conservation, climate change mitigation, and waste management initiatives. 
-                <br>We believe in the power of student leadership and are passionate about fostering a community that cares for our Earth.
-                <br>
-                <br>Contact Us: pulse@application_development.com
-                <br>Address: Centro Escolar University - Makati Legazpi Village Campus
-                <br>
-                <br>This website is designed with love for our planet. Let's work together for a greener future!
+                <p>Contact Us: pulse@application_development.com
+                    <br>Address: Centro Escolar University - Makati Legazpi Village Campus
+                    <br>
+                    <br>This website is designed with love for our planet and to be user friendly. 
+                        Let's work together for a greener future!
                 </p>
             </div>
         </div>
