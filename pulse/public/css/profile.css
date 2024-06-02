@@ -90,12 +90,40 @@ body {
     justify-content: left;
 }
 
+.buttons{
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    right: 170px;
+    top: 210px;
+}
+
+.buttons button{
+    font-size: 15px;
+    border-radius: 12px;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons .Edit{
+    background-color: #3E6F58;
+    color: white;
+}
+
 .about-me-label {
     margin: 0px;
 }
 
 .about-me-data {
     margin-top: 5px;
+}
+
+.input-field {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #C8D5B9;
 }
 
 .about-me-data div {

@@ -23,9 +23,9 @@
                     <ul>
                         <li>
                             <img src="{{ asset('img/icons/email.png') }}" alt=""> 
-                            Email: 
+                            Email: ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
                             <input type="text" name="userEmail" value="{{ Auth::user()->email }}" class="input-field" readonly> 
-                            <a href="{{ route('privacy-change-email') }}" class="Change-Email"> Change</a>
+                            <a href="{{ route('privacy-change-email') }}" class="Change-Email">  Change</a>
                         </li> 
                         <li>
                             <img src="{{ asset('img/icons/lock.png') }}" alt=""> 

@@ -5,5 +5,5 @@
         <p class="username">@NathanielMapagmahal25</p>
     </div>
     <button class="add-friend-button">Add Friend</button>
-    <p class="bio">love ko si mitch</p>
+    <textarea class="bio" placeholder="Love ko si Mich <3" ></textarea>
 </div>

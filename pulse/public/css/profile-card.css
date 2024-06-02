@@ -9,3 +9,19 @@
     height: 315px;
     width: 200px;
 }
+
+.profile-card textarea {
+    background-color: white;
+    position: relative;
+    border: none;
+    outline: none; /* Remove outline */
+    resize: none; /* Disable resizing */
+    width: 240px;
+    height: 200px;
+    top: 20px;
+}
+
+.profile-card textarea::placeholder {
+    color: black;
+    text-align: center;
+}
