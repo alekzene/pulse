@@ -82,3 +82,7 @@ Route::get('/privacy-change-email', function () {
 Route::get('/privacy-change-password', function () {
     return view('privacy-change-password');
 });
+
+Route::get('/create-post', function () {
+    return view('create-post');
+});
