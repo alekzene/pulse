@@ -9,8 +9,7 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/privacy.css') }}" rel="stylesheet">
-
-    
+       
 </head>
 <body>
     @include('templates.header')
