@@ -10,16 +10,8 @@
     width: 200px;
 }
 
-.profile-card textarea {
-    background-color: white;
-    position: relative;
-    border: none;
-    outline: none; 
-    resize: none; 
-    width: 240px;
-    height: 200px;
-    top: 20px;
-    justify-content: center;
+.profile-card p{
+    color: black;
 }
 
 .profile-card textarea::placeholder {

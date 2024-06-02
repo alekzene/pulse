@@ -1,9 +1,15 @@
 <div class="post">
     <div class="post-header">
+        <a href = "profile">
         <img src="img/user-profile-icon.png" alt="Profile Picture">
+        </a>
         <div>
+            <a href = "profile">
             <h4>Nath ♥ Mich</h4>
+            </a>
+            <a href = "profile">
             <p>@NathanielMapagmahal25</p>
+            </a>
         </div>
     </div>
     <div class="post-description">

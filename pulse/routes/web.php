@@ -47,8 +47,8 @@ Route::get('/feed', function () {
 
 // ->middleware('auth');
 
-Route::get('/profile', function () {
-    return view('profile');
+Route::get('/profile-2', function () {
+    return view('profile-2');
 });
 
 Route::get('/reset-pass', function () {
@@ -98,3 +98,11 @@ Route::get('/create-post', function () {
 Route::post('/logout', [AuthController::class,
         'logout'
  ])->name('logout');
+
+ Route::get('/help-2', function () {
+    return view('help-2');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});

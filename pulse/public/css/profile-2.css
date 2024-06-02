@@ -64,17 +64,6 @@ body {
     color: grey;
 }
 
-.add-friend-button {
-    background-color: rgba(62, 111, 88, 1);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    font-size: 15px;
-}
-
 .bio {
     font-size: 13px;
 }
@@ -92,8 +81,23 @@ body {
 
 .about-me-label {
     margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.edit-link {
+    font-size: 20px;
+    color: Black;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.edit-link:hover {
+    color: #3e6f58;
+    font-weight: bold;
+}
 .about-me-data {
     margin-top: 5px;
 }
