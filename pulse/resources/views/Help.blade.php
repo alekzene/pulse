@@ -22,8 +22,8 @@
             <div class="content">
                 <div class="text">
                     <h1>Documentation</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        <br>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+                    <p>This is a social media site similar to Facebook, created by the team w3ird0s. It aims to have Create, Read, 
+                        Update, and Delete (CRUD) functionality, which the developers are required to implement.  </p>
                 </div>
             </div>
         </main>
@@ -62,12 +62,21 @@
             </div>
         </div>
         <div class="text1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                <br>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                <br>laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                <br>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                <br>sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <div class="head">
+                <p><strong>© 2024 Pulse. All rights reserved.</strong></p>
+            </div>
+            <div class="mean">
+                <p>
+                    <br>Pulse is committed to making a positive impact on our planet. 
+                <br>We actively participate in environmental conservation, climate change mitigation, and waste management initiatives. 
+                <br>We believe in the power of student leadership and are passionate about fostering a community that cares for our Earth.
+                <br>
+                <br>Contact Us: pulse@application_development.com
+                <br>Address: Centro Escolar University - Makati Legazpi Village Campus
+                <br>
+                <br>This website is designed with love for our planet. Let's work together for a greener future!
+                </p>
+            </div>
         </div>
     </body>
 </html>
