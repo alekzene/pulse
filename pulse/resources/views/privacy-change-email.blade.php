@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Change Email </title>
+    <title> Change Email | Pulse </title>
     <link rel="stylesheet" href="{{ asset('css/privacy-change-email.css')}}">
 
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Pulse - Capture Your Thoughts</title>
+        <title>Documentation | Pulse</title>
         <link rel="stylesheet" href="{{ asset('css/help.css')}}">
         <link rel="stylesheet" href="{{assert('css/footer.css')}}">
         

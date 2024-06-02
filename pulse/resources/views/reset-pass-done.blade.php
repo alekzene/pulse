@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Page</title>
+    <title>Reset Password | Pulse</title>
     <link rel="stylesheet" href="{{ asset('css/reset-pass-done.css') }}">
 </head>
 <body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Creat A Post </title>
+    <title> Create Post | Pulse </title>
 
     <link rel="stylesheet" href="{{ asset('css/create-post.css')}}">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
