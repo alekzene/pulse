@@ -29,7 +29,7 @@
                             <form method="GET" action="{{ route('create-acct') }}">
                             @csrf
                               <button type="submit" class="get-started">Get Started</button>
-                            </form>
+                            </form> 
                           </div>
                 <div class="image">
                     <img src="img/mockup.png" alt="" />

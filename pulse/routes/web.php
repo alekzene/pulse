@@ -86,3 +86,7 @@ Route::get('/privacy-change-password', function () {
 Route::get('/create-post', function () {
     return view('create-post');
 });
+
+Route::post('/logout', [AuthController::class,
+        'logout'
+ ])->name('logout');
