@@ -9,6 +9,11 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
     
+    <script>
+        function redirectToFeed() {
+            window.location.href = "{{ url('feed') }}";
+        }
+    </script>
 </head>
 <body>
     @include('templates.header')
@@ -29,7 +34,7 @@
                     </div>
                     <div class="button-panel">
                         <div class ="buttons">
-                        <button class="Cancel">Cancel </button>
+                        <button class="Cancel" onclick="redirectToFeed()">Cancel</button>
                         <button class="Update">Update</button>
                         </div>
                     </div>
