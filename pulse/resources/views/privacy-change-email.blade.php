@@ -19,6 +19,13 @@
                     <div class="credentials-panel">
                         <h1><img src="img/icons/email.png" alt=""> Change Email</h1>
                         <input type="text" name="userName" placeholder="New E-mail" class="input-field" required>
+                        <div class="image-upload">
+                            <input type="file" id="file-input" multiple>
+                            <label for="file-input">
+                                <img src="upload-icon.png" alt="Upload Image">
+                            </label>
+                        </div>
+                    </div>
                         <div class ="buttons">
                             <button class="Cancel">Cancel</button>
                             <button class="Update">Update</button>
