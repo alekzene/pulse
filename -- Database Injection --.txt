@@ -1,13 +1,5 @@
 -- Database Injection --
 
--- CREATE TABLE UserAuthen (
---   userID int not null auto_increment,
---   userName varchar(20) not null,
---   userPass varchar(20) not null,
---   primary key (userID),
---   unique key (userName)
--- );
-
 -- CREATE TABLE UserInfo (
 --   infoID int not null auto_increment primary key,
 --   address varchar(1000) not null,
@@ -28,6 +20,20 @@ CREATE TABLE UserAuthen (
     name varchar(255) not null,
     gender enum("Male", "Female") not null,
     email varchar(255) not null unique
+);
+
+CREATE TABLE UserInfo (
+    InfoID int not null auto_increment primary key,
+    userID int not null,
+    hometown varchar(255),
+    livesIn varchar(255),
+    elementary varchar(255),
+    highschool varchar(255),
+    college varchar(255),
+    workAt varchar(255),
+    birthday date,
+    bio text,
+    foreign key (userID) references UserAuthen(userID)
 );
 
 CREATE TABLE UserPosts (
