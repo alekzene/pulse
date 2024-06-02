@@ -17,12 +17,15 @@
             <div class="privacy-content">
                 <div class="privacy-panel">
                     <div class="credentials-panel">
-                        <h1><img src="img/icons/email.png" alt=""> Change Email</h1>
-                        <input type="text" name="userName" placeholder="New E-mail" class="input-field" required>
-                        <div class ="buttons">
-                            <button class="Cancel">Cancel</button>
-                            <button class="Update">Update</button>
-                        </div>
+                        <h1><img src="{{ asset('img/icons/email.png') }}" alt=""> Change Email</h1>
+                        <form method="POST" action="{{ route('update-email') }}">
+                            @csrf
+                            <input type="email" name="email" placeholder="New E-mail" class="input-field" required>
+                            <div class="buttons">
+                                <button type="button" class="Cancel" onclick="window.location='{{ route('privacy') }}'">Cancel</button>
+                                <button type="submit" class="Update">Update</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
