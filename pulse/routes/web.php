@@ -73,26 +73,22 @@ Route::get('/notification', function () {
 
 Route::get('/privacy', function () {
     return view('privacy');
-})->name('privacy');
+});
 
 Route::get('/privacy-change-email', function () {
     return view('privacy-change-email');
-})->name('privacy-change-email');
-
-Route::post('/update-email', [AuthController::class, 
-    'updateEmail'
-])->name('update-email');
+});
 
 Route::get('/privacy-change-password', function () {
     return view('privacy-change-password');
-})->name('privacy-change-password');
-
-Route::post('/update-password', [AuthController::class, 
-    'updatePassword'
-])->name('update-password');
+});
 
 Route::get('/create-post', function () {
     return view('create-post');
+});
+
+Route::get('/sample', function () {
+    return view('sample');
 });
 
 Route::post('/logout', [AuthController::class,
