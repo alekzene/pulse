@@ -93,7 +93,7 @@ Route::post('/update-password', [AuthController::class,
 
 Route::get('/create-post', function () {
     return view('create-post');
-});
+})->name('create-post');
 
 Route::post('/logout', [AuthController::class,
         'logout'

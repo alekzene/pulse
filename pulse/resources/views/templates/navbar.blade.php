@@ -11,6 +11,9 @@
         <li><a href="privacy"><img src="img/icons/settings.png" alt=""> Settings</a></li>
         <li><a href="help"><img src="img/icons/help.png" alt=""> Help</a></li>
         <li><a href="login"><img src="img/icons/log-out.png" alt=""> Log Out</a></li>
-        <button class="post-button">Post</button>
+        <form method="GET" action="{{route('create-post')}}">
+            @csrf
+            <button class="post-button">Post</button>
+        </form>
     </ul>
 </div>
