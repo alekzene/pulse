@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Privacy </title>
 
-    <link rel="stylesheet" href="{{ asset('css/privacy.css')}}">
+    @include('templates.font')
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/privacy.css') }}" rel="stylesheet">
+
     
 </head>
 <body>
