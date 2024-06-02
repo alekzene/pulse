@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\UserAuthen;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Crypt;
 
 class AuthController extends Controller
 {
@@ -100,6 +99,41 @@ class AuthController extends Controller
             ]);
 
         return redirect()->route('reset-pass-done');
+    }
+
+    public function updateEmail(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|unique:UserAuthen,email,' . Auth::id() . ',userID',
+        ]);
+
+        DB::table('UserAuthen')
+            ->where('userID', Auth::id())
+            ->update(['email' => $request->email]);
+
+        return redirect()->route('privacy')->with('success', 'Email updated successfully.');
+    }
+
+   public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => 'required',
+            'new_password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $user = DB::table('UserAuthen')
+            ->where('userID', Auth::id())
+            ->first();
+
+        if (!Hash::check($request->current_password, $user->userPass)) {
+            return back()->withErrors(['current_password' => 'The current password is incorrect.']);
+        }
+
+        DB::table('UserAuthen')
+            ->where('userID', Auth::id())
+            ->update(['userPass' => Hash::make($request->new_password)]);
+
+        return redirect()->route('privacy')->with('success', 'Password updated successfully.');
     }
 
     public function Help(Request $request) {
