@@ -14,14 +14,76 @@
     background-color: white;
     position: relative;
     border: none;
-    outline: none; /* Remove outline */
-    resize: none; /* Disable resizing */
+    outline: none; 
+    resize: none; 
     width: 240px;
     height: 200px;
     top: 20px;
+    justify-content: center;
 }
 
 .profile-card textarea::placeholder {
-    color: black;
     text-align: center;
+}
+
+.green-card-section {
+    border-radius: 15px 15px 0 0;
+    flex-direction: column;
+    background-color: #3e6f58;
+    align-items: center;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.display-name, .username {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.display-name, .username {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.display-name {
+    font-size: 30px;
+}
+
+.username {
+    font-size: 13px;
+    font-weight: 0;
+    text-decoration: none;
+    color: grey;
+}
+
+.add-friend-button {
+    background-color: rgba(62, 111, 88, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.bio {
+    font-size: 13px;
 }
