@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserInfoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,10 +47,6 @@ Route::get('/feed', function () {
 });
 
 // ->middleware('auth');
-
-Route::get('/profile-2', function () {
-    return view('profile-2');
-});
 
 Route::get('/reset-pass', function () {
     return view('reset-pass');
@@ -106,3 +103,15 @@ Route::post('/logout', [AuthController::class,
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/profile-2', [UserInfoController::class, 
+    'showProfile'
+])->name('profile-2');
+
+Route::post('/update-user-info', [UserInfoController::class, 
+    'updateUserInfo'
+])->name('update-user-info');
+
+Route::post('/update-user-bio', [UserInfoController::class, 
+    'updateUserBio'
+])->name('update-user-bio');

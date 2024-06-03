@@ -120,3 +120,7 @@ body {
 .about-me-data p {
     margin: 0px;
 }
+
+.editable {
+    border: 2px solid green;
+}
