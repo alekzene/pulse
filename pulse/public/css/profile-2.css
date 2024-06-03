@@ -1,0 +1,126 @@
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 250px; 
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    background-color: rgba(200, 213, 185, 1);
+    padding: 50px;
+    margin-left: 100px;
+    margin-right: 90px;
+    border-radius: 15px;
+    gap: 50px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 975px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.display-name, .username {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.display-name {
+    font-size: 30px;
+}
+
+.username {
+    font-size: 13px;
+    color: grey;
+}
+
+.bio {
+    font-size: 13px;
+}
+
+.about-card {
+    background-color: white;
+    height: 315px;
+    width: 600px;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.about-me-label {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-link {
+    font-size: 20px;
+    color: Black;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.edit-link:hover {
+    color: #3e6f58;
+    font-weight: bold;
+}
+.about-me-data {
+    margin-top: 5px;
+}
+
+.input-field {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #C8D5B9;
+    width: 200px;
+}
+
+.about-me-data div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about-me-data p {
+    margin: 0px;
+}
+
+.editable {
+    border: 2px solid green;
+}

@@ -1,0 +1,47 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 250px; 
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    background-color: rgba(200, 213, 185, 1);
+    padding: 50px;
+    margin-left: 100px;
+    margin-right: 90px;
+    border-radius: 15px;
+    gap: 50px;
+}
+
+.search-result-label {
+    margin-top: 55px;
+    margin-left: 100px;
+    margin-right: 90px;
+    font-size: 20px;
+}
+
+.profile-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 975px;
+}

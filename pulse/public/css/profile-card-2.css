@@ -1,0 +1,48 @@
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 315px;
+    width: 200px;
+}
+
+.profile-card p{
+    color: black;
+}
+
+.profile-card textarea {
+    background-color: white;
+    position: relative;
+    border: none;
+    outline: none; /* Remove outline */
+    resize: none; /* Disable resizing */
+    width: 240px;
+    height: 200px;
+    top: 20px;
+}
+
+.profile-card textarea::placeholder {
+    color: black;
+    text-align: center;
+}
+
+.bio {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center; 
+}
+
+.bio[disabled] {
+    cursor: not-allowed;
+    pointer-events: none; 
+}

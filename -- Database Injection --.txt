@@ -1,0 +1,77 @@
+-- Database Injection --
+
+-- CREATE TABLE UserInfo (
+--   infoID int not null auto_increment primary key,
+--   address varchar(1000) not null,
+--   gender enum("Male", "Female", "Undisclosed") not null,
+--   birthdate date not null, 
+--   workplace varchar(100),
+--   maritalStatus enum("Single", "Married", "Widowed", "Complicated", "Undisclosed") not null,
+--   userID int not null,
+--   foreign key (userID) references UserAuthen(userID)
+-- );
+
+Insert into Mysql database and migrate
+
+CREATE TABLE UserAuthen (
+    userID int not null auto_increment primary key,
+    userName varchar(255) not null unique,
+    userPass varchar(255) not null,
+    name varchar(255) not null,
+    gender enum("Male", "Female") not null,
+    email varchar(255) not null unique
+);
+
+CREATE TABLE UserInfo (
+    infoID int not null auto_increment primary key,
+    userID int not null,
+    hometown varchar(255),
+    livesIn varchar(255),
+    elementary varchar(255),
+    highschool varchar(255),
+    college varchar(255),
+    workAt varchar(255),
+    birthday date,
+    bio text,
+    profilePic varchar(1024),
+    foreign key (userID) references UserAuthen(userID)
+);
+
+CREATE TABLE UserPosts (
+  postID int not null auto_increment primary key,
+  postDescription text,
+  postCreated datetime not null,
+  likes int,
+  userID int not null,
+  foreign key (userID) references UserAuthen(userID)
+);
+
+CREATE TABLE PostImages (
+  imageID int not null auto_increment primary key,
+  imgURL varchar(255),
+  postID int not null,
+  foreign key (postID) references UserPosts(postID)
+);
+
+CREATE TABLE PostReplies (
+  replyID int not null auto_increment primary key,
+  replierID int not null,
+  replierName varchar(20) not null,
+  replyDescription text,
+  replyDateCreated datetime not null,
+  likes int,
+  userID int not null,
+  postID int not null,
+  foreign key (userID) references UserAuthen(userID),
+  foreign key (replierID) references UserAuthen(userID),
+  foreign key (replierName) references UserAuthen(userName),
+  foreign key (postID) references UserPosts(postID)
+);
+
+CREATE TABLE UserFollows (
+  followsID int not null auto_increment primary key,
+  followedUserID int not null,
+  followedUserName varchar(20) not null,
+  userID int,
+  foreign key (userID) references UserAuthen(userID)
+);

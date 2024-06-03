@@ -1,0 +1,83 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.container {
+    text-align: flex-start;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px
+}
+
+.label, .description {
+    margin-bottom: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(200, 213, 185, 1);
+    padding: 50px;
+    margin: 0px;
+    margin-top: 50px;
+    /* margin-bottom: 50px; */
+    gap: 30px;
+    border-radius: 15px;
+    width: 1275px;
+}
+
+.help-title {    
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.first-row, .second-row {
+    display: flex;
+    flex-direction: row;
+    /* gap: 500px; */
+    justify-content: center;
+    width: 1225px;
+    margin-left: 90px;
+}
+
+.first-row div, .second-row div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+    width: 1000px;
+    padding: 20px
+}
+
+.first-row p, .second-row p {
+    font-size: 25px;
+    margin: 0;
+}
+
+.first-row h1, .second-row h1 {
+    margin: 0;
+    font-size: 50px;
+    color: #3e6f58;
+}
+
+/* .footer {
+    justify-content: flex-end;
+} */

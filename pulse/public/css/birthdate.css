@@ -1,0 +1,23 @@
+.birth-date-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: -5px; /* Adjust vertical alignment */
+}
+
+.birth-date-container select {
+    width: calc(33.33% - 4px);
+    background-color: #C8D5B9;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+    /* Adjust alignment */
+    margin-top: 0; /* Reset margin */
+    margin-left: 0; /* Reset margin */
+}
+
+.input-field.editable {
+    background-color: #fff !important;
+    border: 1px solid #000 !important;
+}
+

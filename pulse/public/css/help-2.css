@@ -1,0 +1,103 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.main-panel {
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; */
+    margin-left: 250px; 
+    background-color: white;
+}
+
+.content{
+    position: relative;
+    top: 3px;
+    left: 35px;
+    width: 1195px;
+    height: 1000px;
+    position: bottom;
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.text h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    color: #000000;
+    text-align: left;
+}
+
+.text p {
+    font-size: 30px;
+    color: #000000;
+    text-align: left;
+    position: absolute;
+    line-height: 1.5;
+    top: 100px;
+}
+
+.green-container{
+    background-color: #c8d5b9;
+    padding: 55px;
+    width: 90%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    height: 575px;
+    top: 200px;
+}
+
+.green-container-header h1{
+    position: relative;
+    text-align: left;
+    right: 250px;
+    font-size: 45px;
+    bottom: 50px;
+}
+
+.container {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    bottom: 50px;
+}
+
+.step {
+    background-color: #C8D5B9;
+    padding: 10px;
+    border: none;
+}
+
+.step h1 {
+    color: #2b6747;
+    margin: 0;
+    position: relative;
+    right: 250px;
+    font-size: 40px;
+}
+
+.step p {
+    margin: 10px 0 0 0;
+    font-size: 1em;
+    color: black;
+    text-align: left;
+    font-size: 30px;
+    position: relative;
+    left: 30px;
+    bottom: 50px;
+}

@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin-top: 30px;
+    padding: 30px;
+    color: #3e6f58;
+    font-size: 15px;
+}
+
+.footer-options {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-options a {
+    color: #3e6f58;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    margin: 20px;
+}
