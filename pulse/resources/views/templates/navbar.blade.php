@@ -1,7 +1,9 @@
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <div class="navbar">
     <a href="profile-2" class="profile-link">
         <div class="profile">
-            <img src="img/2nd-icon-user-profile.png" alt="">
+            <img id="navbar-profile-pic" src="{{ isset($userInfo->profilePic) ? asset('storage/profile_images/' . $userInfo->profilePic) : asset('img/2nd-icon-user-profile.png') }}" alt="">
             <p>Profile</p>
         </div>
     </a>
