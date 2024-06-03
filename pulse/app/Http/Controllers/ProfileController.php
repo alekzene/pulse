@@ -37,12 +37,20 @@ class ProfileController extends Controller
     }
 
     public function getProfileInfo()
-    {
-        $user = Auth::user();
-        $userInfo = DB::table('UserInfo')
-            ->where('userID', $user->id)
-            ->first();
+{
+    $user = Auth::user();
+    $userInfo = DB::table('UserInfo')
+        ->where('userID', $user->id)
+        ->first();
 
-        return view('navbar', ['userInfo' => $userInfo]);
+    if (!$userInfo) {
+
+        $userInfo = (object) [
+            'profilePic' => asset('img/2nd-icon-user-profile.png'),
+            'bio' => 'This user has not provided any bio yet.', 
+        ];
     }
+
+    return view('navbar', ['userInfo' => $userInfo]);
+}
 }
