@@ -29,38 +29,35 @@
     justify-content: flex-start;
     gap: 6px;
     margin-left: 10px;
-    
 }
 
 .post-header div h4 {
     font-size: x-large;
     margin: 0px;
     color: black;
-    text-decoration: none;
     transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
 }
 
 .post-header div h4:hover {
-    background-color: White; /* Optional: change background color on hover */
-    color: #3e6f58; /* Change text color on hover */
-    font-weight: bold; /* Bold the text on hover */
+    background-color: White;
+    color: #3e6f58;
+    font-weight: bold;
 }
 
 .post-header div p {
     color: black;
-    text-decoration: none; 
     transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
     font-size: large;
     margin: 0px;
 }
 
 .post-header div p:hover {
-    background-color: White; /* Optional: change background color on hover */
-    color: #3e6f58; /* Change text color on hover */
-    font-weight: bold; /* Bold the text on hover */
+    background-color: White;
+    color: #3e6f58;
+    font-weight: bold;
 }
 
-.post-description p{
+.post-description p {
     font-size: large;
     align-items: left;
 }
@@ -87,4 +84,12 @@
 
 .post-images img:last-child {
     margin-right: 0;
+}
+
+.post-header a {
+    text-decoration: none;
+}
+
+.post-header a:hover {
+    text-decoration: none;
 }
