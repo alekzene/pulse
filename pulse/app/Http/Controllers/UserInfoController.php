@@ -14,7 +14,7 @@ class UserInfoController extends Controller
         $userID = Auth::id();
         $user = UserAuthen::find($userID);
         $userInfo = DB::table('UserInfo')->where('userID', $userID)->first();
-
+        
         return view('profile-2', compact('user', 'userInfo'));
     }
 

@@ -20,8 +20,33 @@ class ProfileController extends Controller
 
         $request->profile_image->storeAs('public/profile_images', $imageName);
 
-        return response()->json(['url' => asset('storage/profile_images/' . $imageName)]);
+        // Get the user ID
+    $userID = Auth::id();
+
+    // Check if the user already has a UserInfo entry
+    $userInfo = DB::table('UserInfo')->where('userID', $userID)->first();
+
+    // If the user doesn't have a UserInfo entry, create one
+    if (!$userInfo) {
+        // Insert a new UserInfo entry for the user
+        $infoID = DB::table('UserInfo')->insertGetId([
+            'userID' => $userID,
+            // Add other default values as needed
+        ]);
+
+        // Now retrieve the newly created UserInfo entry
+        $userInfo = DB::table('UserInfo')->where('infoID', $infoID)->first();
     }
+
+    // Update the profilePic field in UserInfo
+    DB::table('UserInfo')
+        ->where('userID', $userID)
+        ->update([
+            'profilePic' => $imageName
+        ]);
+
+    return response()->json(['url' => asset('storage/profile_images/' . $imageName)]);
+}
 
     public function updateProfileImageUrl(Request $request)
     {

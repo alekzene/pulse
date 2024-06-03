@@ -62,12 +62,28 @@ class AuthController extends Controller
             'password.min' => 'The password must be at least 8 characters long.',
         ]);
 
-        DB::table('UserAuthen')->insert([
+        $userID = DB::table('UserAuthen')->insert([
             'userName' => $request->username,
             'userPass' => Hash::make($request->password), // Password Hased
             'name' => $request->name,
             'gender' => $request->gender,
             'email' => $request->email,
+        ]);
+
+        $defaultProfilePic = asset('img/2nd-icon-user-profile.png');
+        $invisibleText = "‎";
+    
+        $infoID = DB::table('UserInfo')->insertGetId([
+            'userID' => $userID,
+            'hometown' => $invisibleText,
+            'livesIn' => $invisibleText,
+            'elementary' => $invisibleText,
+            'highschool' => $invisibleText, 
+            'college' => $invisibleText,
+            'workAt' => $invisibleText,
+            'birthday' => '1970-01-01',
+            'bio' => 'Whats on your mind...',
+            'profilePic' => $defaultProfilePic,
         ]);
 
         return redirect()->route('login')->with('success', 'Account created successfully. Please login.');

@@ -9,7 +9,7 @@
         fetch("/upload-profile-image", {
             method: "POST",
             headers: {
-                "X-CSRF-TOKEN": csrfToken, // Include CSRF token in the headers
+                "X-CSRF-TOKEN": csrfToken,
             },
             body: formData,
         })
@@ -18,7 +18,7 @@
                 if (data.url) {
                     document.getElementById("profile-pic").src = data.url;
                     updateProfileImageUrl(data.url);
-                    updateNavbarProfilePic(data.url); // Update navbar profile pic
+                    updateNavbarProfilePic(data.url);
                     window.location.href = "/profile-2";
                 }
             })
@@ -46,19 +46,18 @@
             .catch((error) => console.error("Error:", error));
     }
     document.addEventListener("DOMContentLoaded", function () {
-        // Add event listener to profile picture
         document
             .getElementById("profile-pic")
             .addEventListener("click", function () {
-                // Trigger click event on file input
                 document.getElementById("file-input").click();
             });
 
-        // Set the initial navbar profile picture
         const profilePicUrl = document.getElementById("profile-pic").src;
-        updateNavbarProfilePic(profilePicUrl);
+        if (!profilePicUrl || profilePicUrl.trim() === "") {
+            profilePicUrl = "{{ asset('img/2nd-icon-user-profile.png') }}";
+        }
 
-        // Store profile picture URL in session storage
+        updateNavbarProfilePic(profilePicUrl);
         sessionStorage.setItem("profilePicUrl", profilePicUrl);
     });
 

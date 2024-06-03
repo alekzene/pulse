@@ -1,7 +1,12 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <div class="profile-card">
-    <img class="profile-pic" id="profile-pic" src="{{ $userInfo->profilePic ? asset($userInfo->profilePic) : asset('img/2nd-icon-user-profile.png') }}" alt="Profile Picture">
+    @if($userInfo)
+        <img class="profile-pic" id="profile-pic" src="{{ $userInfo->profilePic ? asset($userInfo->profilePic) : asset('img/2nd-icon-user-profile.png') }}" alt="Profile Picture">
+    @else
+        <img class="profile-pic" id="profile-pic" src="{{ asset('img/2nd-icon-user-profile.png') }}" alt="Profile Picture">
+    @endif
+
     <form id="image-form" style="display: none;">
         <input type="file" id="file-input" accept="image/*" onchange="uploadProfileImage(event)">
     </form>

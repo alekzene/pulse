@@ -1,16 +1,5 @@
 -- Database Injection --
 
--- CREATE TABLE UserInfo (
---   infoID int not null auto_increment primary key,
---   address varchar(1000) not null,
---   gender enum("Male", "Female", "Undisclosed") not null,
---   birthdate date not null, 
---   workplace varchar(100),
---   maritalStatus enum("Single", "Married", "Widowed", "Complicated", "Undisclosed") not null,
---   userID int not null,
---   foreign key (userID) references UserAuthen(userID)
--- );
-
 Insert into Mysql database and migrate
 
 CREATE TABLE UserAuthen (
