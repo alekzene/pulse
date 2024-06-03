@@ -20,6 +20,7 @@ function uploadProfileImage(event) {
             if (data.url) {
                 document.getElementById("profile-pic").src = data.url;
                 updateProfileImageUrl(data.url);
+                updateNavbarProfilePic(data.url); // Update navbar profile pic
             }
         })
         .catch((error) => console.error("Error:", error));
@@ -55,4 +56,15 @@ document.addEventListener("DOMContentLoaded", function () {
             // Trigger click event on file input
             document.getElementById("file-input").click();
         });
+
+    // Set the initial navbar profile picture
+    const profilePicUrl = document.getElementById("profile-pic").src;
+    updateNavbarProfilePic(profilePicUrl);
 });
+
+function updateNavbarProfilePic(imageUrl) {
+    const navbarProfilePic = document.getElementById("navbar-profile-pic");
+    if (navbarProfilePic) {
+        navbarProfilePic.src = imageUrl;
+    }
+}
