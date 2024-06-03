@@ -124,3 +124,7 @@ Route::post('/upload-profile-image', [ProfileController::class,
 Route::post('/update-profile-image-url', [ProfileController::class, 
     'updateProfileImageUrl'
 ]);
+
+Route::get('/navbar', [ProfileController::class, 
+    'getProfileInfo'
+]);

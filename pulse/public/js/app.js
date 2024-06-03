@@ -3,38 +3,66 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputFields = document.querySelectorAll(".input-field");
     const bioTextarea = document.getElementById("bio");
 
-    function toggleBioEditable(editable) {
-        if (editable) {
-            bioTextarea.removeAttribute("disabled");
-            bioTextarea.classList.add("editable");
-        } else {
-            bioTextarea.setAttribute("disabled", "disabled");
-            bioTextarea.classList.remove("editable");
-        }
-    }
-
-    toggleBioEditable(false);
+    bioTextarea.setAttribute("disabled", "disabled");
 
     editLink.addEventListener("click", function (event) {
         event.preventDefault();
-        const isEditMode = editLink.textContent === "Edit";
+        if (editLink.textContent === "Edit") {
+            inputFields.forEach((input) => {
+                input.removeAttribute("disabled");
+                input.classList.add("editable");
+            });
+            editLink.textContent = "Save";
+            bioTextarea.removeAttribute("disabled");
+        } else {
+            const formData = {};
+            inputFields.forEach((input) => {
+                formData[input.name] = input.value;
+                input.setAttribute("disabled", "disabled");
+                input.classList.remove("editable");
+            });
 
-        inputFields.forEach((input) => {
-            input.disabled = !isEditMode;
-        });
+            formData[
+                "birthday"
+            ] = `${formData["birth-year"]}-${formData["birth-month"]}-${formData["birth-day"]}`;
+            formData["bio"] = bioTextarea.value;
 
-        toggleBioEditable(isEditMode);
+            editLink.textContent = "Edit";
+            bioTextarea.setAttribute("disabled", "disabled");
 
-        editLink.textContent = isEditMode ? "Save" : "Edit";
-
-        if (!isEditMode) {
+            saveUserInfo(formData);
             saveBio();
         }
     });
 
+    function saveUserInfo(formData) {
+        fetch("/update-user-info", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRF-TOKEN": document
+                    .querySelector('meta[name="csrf-token"]')
+                    .getAttribute("content"),
+            },
+            body: JSON.stringify(formData),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    console.log("User info updated successfully");
+                } else {
+                    console.error("Error updating user info");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+    }
+
     function saveBio() {
         const bio = bioTextarea.value;
 
+        // Send the bio to the server to be saved
         fetch("/update-user-bio", {
             method: "POST",
             headers: {
