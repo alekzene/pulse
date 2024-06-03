@@ -1,3 +1,5 @@
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <div class="profile-card">
     <img class="profile-pic" id="profile-pic" src="{{ $userInfo->profilePic ? asset($userInfo->profilePic) : asset('img/2nd-icon-user-profile.png') }}" alt="Profile Picture">
     <form id="image-form" style="display: none;">

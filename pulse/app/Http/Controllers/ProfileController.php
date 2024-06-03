@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class ProfileController extends Controller
 {
@@ -23,10 +25,24 @@ class ProfileController extends Controller
 
     public function updateProfileImageUrl(Request $request)
     {
-        $user = Auth::user();
-        $user->profilePic = $request->input('imageUrl');
-        $user->save();
+        $userID = Auth::id();  
+         
+        DB::table('UserInfo')
+            ->where('userID', $userID)
+            ->update([
+                'profilePic' => $request->input('imageUrl')
+            ]);
 
         return response()->json(['success' => true]);
+    }
+
+    public function getProfileInfo()
+    {
+        $user = Auth::user();
+        $userInfo = DB::table('UserInfo')
+            ->where('userID', $user->id)
+            ->first();
+
+        return view('navbar', ['userInfo' => $userInfo]);
     }
 }

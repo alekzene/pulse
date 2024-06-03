@@ -3,8 +3,16 @@ function uploadProfileImage(event) {
     const formData = new FormData();
     formData.append("profile_image", file);
 
+    // Get CSRF token from the meta tag
+    const csrfToken = document
+        .querySelector('meta[name="csrf-token"]')
+        .getAttribute("content");
+
     fetch("/upload-profile-image", {
         method: "POST",
+        headers: {
+            "X-CSRF-TOKEN": csrfToken, // Include CSRF token in the headers
+        },
         body: formData,
     })
         .then((response) => response.json())
