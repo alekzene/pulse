@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserInfoController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -115,3 +116,11 @@ Route::post('/update-user-info', [UserInfoController::class,
 Route::post('/update-user-bio', [UserInfoController::class, 
     'updateUserBio'
 ])->name('update-user-bio');
+
+Route::post('/upload-profile-image', [ProfileController::class, 
+    'uploadProfileImage'
+]);
+
+Route::post('/update-profile-image-url', [ProfileController::class, 
+    'updateProfileImageUrl'
+]);

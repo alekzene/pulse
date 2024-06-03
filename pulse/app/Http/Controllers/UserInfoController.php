@@ -51,7 +51,6 @@ class UserInfoController extends Controller
         'bio' => 'nullable|string',
     ]);
 
-    // Update the user's bio
     DB::table('UserInfo')
         ->where('userID', Auth::id())
         ->update([
