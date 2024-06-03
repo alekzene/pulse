@@ -33,7 +33,7 @@ CREATE TABLE UserInfo (
     workAt varchar(255),
     birthday date,
     bio text,
-    profilePic varchar(255),
+    profilePic varchar(1024),
     foreign key (userID) references UserAuthen(userID)
 );
 
