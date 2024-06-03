@@ -36,7 +36,7 @@ class AuthController extends Controller
 
         if ($user && Hash::check($request->userPass, $user->userPass)) {    //for checking if user exist and the password matches also adds password hashing
             Auth::loginUsingId($user->userID);
-            return redirect()->intended('feed');
+            return redirect()->intended('profile-2');
         }
 
         return back()->withErrors([

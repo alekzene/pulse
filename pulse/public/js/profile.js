@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set the initial navbar profile picture
     const profilePicUrl = document.getElementById("profile-pic").src;
     updateNavbarProfilePic(profilePicUrl);
+
+    // Store profile picture URL in session storage
+    sessionStorage.setItem("profilePicUrl", profilePicUrl);
 });
 
 function updateNavbarProfilePic(imageUrl) {
